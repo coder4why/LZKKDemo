@@ -8,9 +8,9 @@
 
 ## 小程序UI：
 <h2 align"center">
-<img src="/pics/1.jpg" width="210" height="374"/>
-<img src="/pics/2.jpg" width="210" height="374"/>
-<img src="/pics/3.jpg" width="210" height="374"/>
+<img src="/pics/1.jpg" width="280" height="498"/>
+<img src="/pics/2.jpg" width="280" height="498"/>
+<img src="/pics/3.jpg" width="280" height="498"/>
 </h2>
 
 
