@@ -1,0 +1,16 @@
+
+<view  class='container'>
+  <input placeholder='歌手、歌名、专辑等' bindconfirm='f1'></input>
+  <view wx:for='{{musics}}' wx:key='music'>
+      <view class='headerContainer' bindtap='f0' data-url='{{item.url}}' data-index='{{index}}'>
+          <image class='headerImage' src='{{item.pic}}'></image>
+          <view class='headerSubContainer'>
+            <text>{{item.title}}</text>
+            <text class='subText'>{{item.author}}</text>
+          </view>
+          <image class='statusImage' src='{{(isPlaying==true&playIndex==index)?"../../images/pause.png":"../../images/play.png"}}'></image>
+      </view>
+      <view class='separte'></view>  
+  </view>
+
+</view>

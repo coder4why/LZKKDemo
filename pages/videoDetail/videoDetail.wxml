@@ -1,0 +1,12 @@
+
+<view>
+
+<video src='{{video}}' autoplay='{{true}}' show-fullscreen-btn='{{true}}'></video>
+<view class='headerContainer'>
+      <image class='headerImage' src='{{headerImage}}'></image>
+      <view class='headerSubContainer'>
+        <text>{{headerName}}</text>
+        <text class='subText'>{{headerContent}}</text>
+      </view>
+  </view>
+</view>
