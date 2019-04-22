@@ -6,6 +6,17 @@ Page({
     videoList:[],
   },
 
+  onPullDownRefresh: function () {
+    console.log('下拉加载更多');
+    wx.showNavigationBarLoading() //在标题栏中显示加载
+    this.requestMsgs(false);
+  },
+  onReachBottom:function(){
+    console.log('上拉刷新');
+    wx.showNavigationBarLoading();
+    this.requestMsgs(true);
+  },
+
   f0:function(event){
 
     var video = event.currentTarget.dataset.videoMsgs.video;
@@ -18,31 +29,42 @@ Page({
 
   },
 
-  onLoad: function () {
-    
+  requestMsgs:function(isBottom){
     var that = this;
     wx.request({
       url: 'https://api.apiopen.top/getJoke',
       data: {
-        "page":0,
-        "count":"20",
-        "type":"video"
+        "page": 0,
+        "count": "5",
+        "type": "video"
       },
-      success: function (res){
-         
-          // if(res.data.code==200){
-            that.setData({
-              videoList: res.data.result
-            });
-            // console.log(that.voideList);
-          // }
+      success: function (res) {
+        if(res.data.code==200){
+         var data = res.data.result;
+         if(isBottom){
+           data = that.data.videoList.concat(data);
+         }else{
+           data = data.concat(that.data.videoList);
+         }
+        that.setData({
+          videoList: data
+        });
+        wx.hideNavigationBarLoading();
+        if(isBottom==false){
+          wx.stopPullDownRefresh();
+        }
+        }
       },
-      fail: function (err){
+      fail: function (err) {
       },
-      complete: function (res){
+      complete: function (res) {
       },
 
     });
+  },
+
+  onLoad: function () {
+    this.requestMsgs(false);
   },
   
 })

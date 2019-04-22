@@ -8,6 +8,7 @@ Page({
   },
 
   reuqestMusic:function(key){
+    wx.showNavigationBarLoading();
     var that = this;
     wx.request({
       url: 'https://api.apiopen.top/searchMusic?name='+key,
@@ -17,9 +18,13 @@ Page({
         that.setData({
           musics: res.data.result
         });
+        wx.hideNavigationBarLoading();
       },
-      fail: function (error) { },
-      complete: function () { },
+      fail: function (error) {
+       },
+      complete: function () { 
+        wx.hideNavigationBarLoading();
+      },
     })
   },
 
@@ -64,6 +69,28 @@ Page({
     });
     innerAudioContext.src = url;
     innerAudioContext.play();
+    innerAudioContext.onError((error)=>{
+      this.setData({
+        isPlaying: false,
+      });
+      var errCode = error.errorCode;
+      var errorMsg = '';
+      if (errCode == 10001){
+        errorMsg = '系统错误';
+      } else if (errCode == 10002){
+        errorMsg = '网络错误';
+      }
+      else if (errCode == 10003){
+        errorMsg = '文件错误';
+      } else if (errCode == 10004){
+        errorMsg = '格式错误';
+      }else{
+        errorMsg = '未知错误';
+      }
+      wx.showToast({
+        title: errorMsg,
+      })
+    });
 
   },
 
