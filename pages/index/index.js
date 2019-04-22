@@ -16,6 +16,14 @@ Page({
     wx.showNavigationBarLoading();
     this.requestMsgs(true);
   },
+  onShareAppMessage: function (msg) {
+      console.log(msg);
+  },
+
+  shareMsg: function (msg) {
+    console.log(msg);
+    this.onShareAppMessage(msg);
+  },
 
   f0:function(event){
 
@@ -35,7 +43,7 @@ Page({
       url: 'https://api.apiopen.top/getJoke',
       data: {
         "page": 0,
-        "count": "5",
+        "count": "20",
         "type": "video"
       },
       success: function (res) {
@@ -65,6 +73,19 @@ Page({
 
   onLoad: function () {
     this.requestMsgs(false);
+    wx.getLocation({
+      type:'gcj02',
+      success: function(res) {
+        console.log(res);
+        const latitude = res.latitude
+        const longitude = res.longitude
+        // wx.openLocation({
+        //   latitude,
+        //   longitude,
+        //   scale: 18
+        // })
+      },
+    })
   },
   
 })

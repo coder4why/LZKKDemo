@@ -13,7 +13,6 @@ Page({
     wx.request({
       url: 'https://api.apiopen.top/searchMusic?name='+key,
       success: function (res) {
-
         console.log(res);
         that.setData({
           musics: res.data.result
@@ -39,16 +38,16 @@ Page({
   },
 
   onHide() {
-    innerAudioContext.pause();
-    this.setData({
-      isPlaying: false,
-    });
+    // innerAudioContext.pause();
+    // this.setData({
+    //   isPlaying: false,
+    // });
   },
   onUnload() {
-    innerAudioContext.pause();
-    this.setData({
-      isPlaying: false,
-    });
+    // innerAudioContext.pause();
+    // this.setData({
+    //   isPlaying: false,
+    // });
   },
   onShow(){
     innerAudioContext.play();
@@ -56,10 +55,11 @@ Page({
       isPlaying: isPlaying,
     });
   },
- 
+  
   //播放音乐
   f0:function(event){
 
+    wx.showNavigationBarLoading();
     console.log(event);
     var url = event.currentTarget.dataset.url;
     var index = event.currentTarget.dataset.index;
@@ -69,6 +69,9 @@ Page({
     });
     innerAudioContext.src = url;
     innerAudioContext.play();
+    innerAudioContext.onPlay(()=>{
+      wx.hideNavigationBarLoading();
+    });
     innerAudioContext.onError((error)=>{
       this.setData({
         isPlaying: false,

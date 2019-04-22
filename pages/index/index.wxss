@@ -50,3 +50,23 @@
   height: 1px;
   background-color: '#333333'
 }
+
+.shareImg{
+  width: 60px;
+  height: 30px;
+}
+
+.btn {
+  display: inline-block;
+  height: 30px;
+  left: 30px;
+  background: lightgray;
+  padding-bottom: 45px;
+  line-height: 2.5;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAxklEQVRYhe2Waw3CMBRGj4RKmIRJqAScgAQk4IA6wAIOQAIOmAP40dtkLEv2uC032fol/bGkvef0cZNBTc2G0gDOUsADD0sJD3wsJZKAmURf4O8SDjgOBIpLtMBVIENwUYnDDGgRCQfcFoKzSbTAWwFP424J76TWojSWcICnJfw8UfhFvNMgc0NOuGP86AOxDcdes88Fh9/dd/I91UJ9ARUc4vGmtpnbu0lADU+Fwop1ajjAZQUcAavhAKccRTQx/a+rqdlfvjDDqf0AOmnwAAAAAElFTkSuQmCC) no-repeat left top;
+  
+}
+
+.btn::after {
+  border: none;
+}
