@@ -12,7 +12,7 @@ input{
       height: 70rpx;  
       /* width: 730rpx; */
       border-radius: 15px;  
-      background-color:lightgray;
+      background-color:#F2F2F2;
       /* color: black; */
       font-size: 14px;
       border:1px black;
@@ -60,15 +60,15 @@ input{
 
 .separte{
 
-  background-color:rgba(0, 10, 10, 0.11);
+  background-color:#F2F2F2;
   height: 1px;
   width: 730rpx;
 }
 
 .statusImage{
 
-  width: 20px;
-  height: 20px;
+  width: 15px;
+  height: 15px;
   margin-top:20px;
   /* margin-right: 0px;  */
   margin-left: 60rpx;

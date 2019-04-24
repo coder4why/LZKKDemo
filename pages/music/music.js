@@ -38,6 +38,7 @@ Page({
   },
 
   onHide() {
+
     // innerAudioContext.pause();
     // this.setData({
     //   isPlaying: false,
@@ -50,6 +51,7 @@ Page({
     // });
   },
   onShow(){
+    wx.hideNavigationBarLoading();
     innerAudioContext.play();
     this.setData({
       isPlaying: isPlaying,
@@ -69,6 +71,7 @@ Page({
     });
     innerAudioContext.src = url;
     innerAudioContext.play();
+    //开始正常播放音频文件：
     innerAudioContext.onPlay(()=>{
       wx.hideNavigationBarLoading();
     });

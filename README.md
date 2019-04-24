@@ -1,4 +1,4 @@
-## 微信小程序 -- 《为音乐而生》
+## 微信小程序 -- 《懒猪看看》
 
 #### 内容涉及：
 ###### 1.基础界面的搭建；
@@ -8,9 +8,10 @@
 
 ## 小程序UI：
 <h2 align"center">
-<img src="/pics/1.jpg" width="280" height="498"/>
-<img src="/pics/2.jpg" width="280" height="498"/>
-<img src="/pics/3.jpg" width="280" height="498"/>
+<img src="/pics/1.png" width="280" height="497"/>
+<img src="/pics/2.png" width="280" height="497"/>
+<img src="/pics/3.png" width="280" height="497"/>
+<img src="/pics/4.png" width="280" height="497"/>
 </h2>
 
 

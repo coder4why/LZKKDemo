@@ -25,6 +25,15 @@ Page({
     this.onShareAppMessage(msg);
   },
 
+  f1: function (itemMsg) {
+    console.log(itemMsg);
+    var index = itemMsg.currentTarget.dataset.index;
+    var item = itemMsg.currentTarget.dataset.videoMsgs;
+    var img = 'videoList[' + index + '].thumbnail'
+    this.setData({
+      [img]: '../../images/loadFail.png'
+    });
+  },
   f0:function(event){
 
     var video = event.currentTarget.dataset.videoMsgs.video;

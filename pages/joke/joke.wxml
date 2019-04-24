@@ -1,0 +1,17 @@
+
+<view class='container'wx:for='{{jokeList}}' wx:for-item="item"  wx:key="jokeContainer">
+  <view class='headerContainer'>
+      <image class='headerImage' src='{{item.header}}'></image>
+      <view class='headerSubContainer'>
+        <text>{{item.username}}</text>
+        <text class='subText'>{{item.top_commentsContent}}</text>
+      </view>
+  </view>
+  <view class='seperateLine'></view>
+  <view class='subContainer'>
+      <text wx:if="{{item.type=='text'}}"  class='contentText'>{{item.text}}</text>
+      <image wx:if="{{item.type=='image'}}" binderror='f0' data-index='{{index}}' data-item='{{item}}' class='bgImage' mode='widthFix' src='{{item.image}}'></image>
+      <!-- <image wx:if="{{item.type=='video'}}" binderror='f0' data-index='{{index}}' data-item='{{item}}' class='bgImage' mode='widthFix' src='{{item.video}}'></image>
+      <image wx:if="{{item.type=='gif'}}" binderror='f0' data-index='{{index}}' data-item='{{item}}' class='bgImage' mode='widthFix' src='{{item.gif}}'></image> -->
+  </view>
+</view>

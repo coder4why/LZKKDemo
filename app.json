@@ -2,7 +2,8 @@
   "pages": [
     "pages/index/index",
     "pages/music/music",
-    "pages/videoDetail/videoDetail"
+    "pages/videoDetail/videoDetail",
+    "pages/joke/joke"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -16,13 +17,19 @@
     "list": [
       {
         "pagePath": "pages/index/index",
-        "text": "首页",
+        "text": "视频",
         "iconPath": "images/home.png",
         "selectedIconPath": "images/home_selected.png"
       },
       {
+        "pagePath": "pages/joke/joke",
+        "text": "段子",
+        "iconPath": "images/joke.png",
+        "selectedIconPath": "images/joke_selected.png"
+      },
+      {
         "pagePath": "pages/music/music",
-        "text": "其他",
+        "text": "听歌",
         "iconPath": "images/music.png",
         "selectedIconPath": "images/music_selected.png"
       }
