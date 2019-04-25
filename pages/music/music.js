@@ -52,10 +52,13 @@ Page({
   },
   onShow(){
     wx.hideNavigationBarLoading();
-    innerAudioContext.play();
-    this.setData({
-      isPlaying: isPlaying,
-    });
+    if (innerAudioContext){
+      innerAudioContext.play();
+    }
+    
+    // this.setData({
+    //   isPlaying: isPlaying,
+    // });
   },
   
   //播放音乐

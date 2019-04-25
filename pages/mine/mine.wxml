@@ -1,0 +1,14 @@
+
+<view class='mapView'>
+    <map scale='13' enable-scroll='{{true}}' enable-zoom='{{true}}' latitude='{{latitude}}' show-location markers='{{markers}}' longitude='{{longitude}}'></map>
+    <view class='mapSb'></view>
+    <view class='headerContainer'>
+          <image class='headerImage' src='{{avatarUrl}}'></image>
+          <view class='headerSubContainer'>
+            <text>{{nickName}}</text>
+            <text class='subText'>{{address}}</text>
+          </view>
+          <button class='infoBtn' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">{{nickName.length>0?"退出":"登录"}}</button>
+    </view>
+    <view class='line'></view>
+</view>

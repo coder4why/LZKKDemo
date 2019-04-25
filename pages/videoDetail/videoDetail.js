@@ -11,7 +11,6 @@ Page({
 
   onLoad: function (options) {
     
-    console.log(options);
     this.setData({ 
       video:options.video,
       headerName: options.headerName,

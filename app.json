@@ -3,7 +3,8 @@
     "pages/index/index",
     "pages/music/music",
     "pages/videoDetail/videoDetail",
-    "pages/joke/joke"
+    "pages/joke/joke",
+    "pages/mine/mine"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -32,6 +33,12 @@
         "text": "听歌",
         "iconPath": "images/music.png",
         "selectedIconPath": "images/music_selected.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "iconPath": "images/mine.png",
+        "selectedIconPath": "images/mine_selected.png"
       }
     ]
   },

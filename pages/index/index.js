@@ -82,19 +82,6 @@ Page({
 
   onLoad: function () {
     this.requestMsgs(false);
-    wx.getLocation({
-      type:'gcj02',
-      success: function(res) {
-        console.log(res);
-        const latitude = res.latitude
-        const longitude = res.longitude
-        // wx.openLocation({
-        //   latitude,
-        //   longitude,
-        //   scale: 18
-        // })
-      },
-    })
   },
   
 })

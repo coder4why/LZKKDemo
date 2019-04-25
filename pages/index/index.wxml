@@ -9,9 +9,9 @@
       </view>
       <button class='btn' open-type="share">转发</button>
   </view>
-  <view class='seperateLine'></view>
   <view class='subContainer'>
       <text class='contentText'>{{item.text}}</text>
       <image bindtap='f0' binderror='f1' data-index='{{index}}' data-video-msgs='{{item}}' class='bgImage' mode='widthFix' src='{{item.thumbnail}}'></image>
   </view>
+  <view class='seperateLine'></view>
 </view>

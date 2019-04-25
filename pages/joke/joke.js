@@ -42,19 +42,21 @@ Page({
         });
       }
   },
+  // https://api.apiopen.top/getJoke?page=1&count=2&type=text
 
   requestMsgs: function (isBottom) {
     var that = this;
     wx.request({
-      url: 'https://www.apiopen.top/satinGodApi',
+      url: 'https://api.apiopen.top/getJoke',
       data: {
-        "type":"1",
+        "type":"text",
         "page": 0,
+        "count":20,
       },
       success: function (res) {
         console.log(res);
         if (res.data.code == 200) {
-          var data = res.data.data;
+          var data = res.data.result;
           if (isBottom) {
             data = that.data.jokeList.concat(data);
           } else {
