@@ -4,7 +4,7 @@
   <view wx:for='{{musics}}' wx:key='music'>
       <view class='headerContainer' bindtap='f0' data-url='{{item.url}}' data-index='{{index}}'>
           <image class='headerImage' src='{{item.pic}}'></image>
-          <view class='headerSubContainer'>
+          <view class='musicSubContainer'>
             <text>{{item.title}}</text>
             <text class='subText'>{{item.author}}</text>
           </view>
