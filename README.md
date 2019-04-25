@@ -10,7 +10,7 @@
      5.下拉刷新、上拉加载；
      6.其他；
 
-#### UI图：
+#### 效果图：
 <h2 align"center">
 <img src="/pics/1.png" width="280" height="496"/>
 <img src="/pics/2.png" width="280" height="496"/>
