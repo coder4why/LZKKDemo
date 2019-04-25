@@ -8,6 +8,9 @@ Page({
   },
 
   reuqestMusic:function(key){
+    if(key.length==0){
+      return;
+    }
     wx.showNavigationBarLoading();
     var that = this;
     wx.request({
