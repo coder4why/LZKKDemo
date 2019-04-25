@@ -11,4 +11,5 @@
           <button class='infoBtn' open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="onGotUserInfo">{{nickName.length>0?"退出":"登录"}}</button>
     </view>
     <view class='line'></view>
+    <text class='subText' bindtap='choose'>选择位置</text>
 </view>

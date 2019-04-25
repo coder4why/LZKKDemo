@@ -63,7 +63,16 @@ Page({
       }
     });
   },
-
+  choose:function(){
+    wx.chooseLocation({
+      //位置选择成功的回调：
+      success: function(res) {
+        console.log('你妹啊');
+        console.log(res);
+        console.log('你妹啊');
+      },
+    })
+  },
   requestLocation:function(){
     var that = this;
     wx.getLocation({
@@ -100,6 +109,9 @@ Page({
 
   onShow:function(){
     this.requestLocation();
+    wx.removeTabBarBadge({
+      index: 3,
+    })
   }
 
 })
