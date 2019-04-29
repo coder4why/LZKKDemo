@@ -3,8 +3,8 @@
   <view class='headerContainer'>
       <image class='headerImage' src='{{item.top_comments_header.length==0?item.header:item.top_comments_header}}'></image>
       <view class='headerSubContainer'>
-        <text>{{item.top_comments_name.length==0?item.name:item.top_comments_name}}</text>
-        <text class='headerContentText'>{{item.top_comments_content?item.top_comments_content:""}}</text>
+        <text>{{item.top_comments_name}}</text>
+        <text class='headerContentText'>{{item.top_comments_content}}</text>
       </view>
       <button class='btn' open-type="share">转发</button>
   </view>

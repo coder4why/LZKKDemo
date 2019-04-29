@@ -17,9 +17,15 @@ Page({
       url: 'https://api.apiopen.top/searchMusic?name='+key,
       success: function (res) {
         console.log(res);
-        that.setData({
-          musics: res.data.result
-        });
+        if(res.data.code==200){
+          that.setData({
+            musics: res.data.result
+          });
+        }else{
+          wx.showToast({
+            title: '为找到对应歌曲',
+          })
+        }
         wx.hideNavigationBarLoading();
       },
       fail: function (error) {
