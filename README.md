@@ -1,5 +1,6 @@
 ## 基于bilibili清华大学微信小程序开发教程编写的 微信小程序 ——《懒猪看看》
 
+#### 《懒猪看看》-- RN版本：<https://github.com/HuPingKang/LZKKDemo-RN>
 #### b站清华大学小程序视频地址：<https://www.bilibili.com/video/av22004522>
 
 #### 内容涉及：
