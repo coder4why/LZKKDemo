@@ -23,7 +23,7 @@ Page({
           });
         }else{
           wx.showToast({
-            title: '为找到对应歌曲',
+            title: '未找到对应歌曲',
           });
         }
         wx.hideNavigationBarLoading();
@@ -37,7 +37,7 @@ Page({
   },
 
   onLoad: function () {
-    this.reuqestMusic('槑头槑脑');
+    this.reuqestMusic('权利的游戏');
     innerAudioContext.onStop((res) => {
       console.log('播放结束'+res);
           this.setData({
